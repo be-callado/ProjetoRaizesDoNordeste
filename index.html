@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Raízes do Nordeste - Final </title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<div class="app-container">
+  
+  <header class="header-minimalista">
+    <div class="header-conteudo">
+      <span class="tag-discreta">Sinta-se em Casa</span>
+      <h1>Raízes do Nordeste</h1>
+      <p>A alma da nossa terra em cada prato.</p>
+    </div>
+  </header>
+
+  <nav class="menu-mobile">
+    <button class="aba-item active" data-target="Inicio">
+      <span class="icone">🏠</span>
+      <span class="texto">Início</span>
+    </button>
+    <button class="aba-item" data-target="Lojas">
+      <span class="icone">📍</span>
+      <span class="texto">Lojas</span>
+    </button>
+    <button class="aba-item" data-target="Cardapio" id="btn-tab-cardapio">
+      <span class="icone">🍽️</span>
+      <span class="texto">Menu</span>
+    </button>
+    <button class="aba-item" data-target="Carrinho">
+      <span class="icone">🛒</span>
+      <span class="texto">Carrinho</span>
+      <span class="badge-carrinho" id="badge-carrinho">0</span>
+    </button>
+    <button class="aba-item" data-target="Fidelidade">
+      <span class="icone">✨</span>
+      <span class="texto">Clube</span>
+    </button>
+  </nav>
+
+  <main class="conteudo-principal">
+    
+    <!-- ABA: INÍCIO -->
+    <section id="Inicio" class="aba-conteudo" style="display: block;">
+      <div class="imagem-fachada">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fachada aconchegante">
+      </div>
+
+      <div class="boas-vindas-clean">
+        <h2>Nossa Casa, Seu Coração 🤎</h2>
+        <p>Aqui, cada prato é um abraço. Preparamos nossa comida com o mesmo carinho, paciência e cuidado de uma refeição em família no interior.</p>
+        <p>Nossa maior alegria é ver você se sentir em casa, acolhido pelos sabores, aromas e memórias da nossa terra. Entre, puxe uma cadeira, sinta o cheiro do café coado e fique à vontade. A casa é sua!</p>
+      </div>
+      
+      <div class="destaque-minimalista">
+        <span class="label-terracota">O Começo de Tudo</span>
+        <h3>Vá na aba "Lojas"</h3>
+        <p>Para começarmos a preparar seu pedido, selecione onde você está.</p>
+      </div>
+    </section>
+
+    <!-- ABA: LOJAS -->
+    <section id="Lojas" class="aba-conteudo" style="display: none;">
+      <div class="cabecalho-secao">
+        <h2>Onde estamos</h2>
+        <p>Selecione a unidade para acessar o cardápio local.</p>
+      </div>
+
+      <div class="lista-lojas">
+        <div class="loja-item clicavel" data-loja="recife">
+          <div class="loja-info">
+            <div class="loja-header">
+              <h3>Recife (Matriz)</h3>
+              <span class="status-texto">Aberto</span>
+            </div>
+            <p class="loja-endereco">Rua da Aurora, 123, Boa Vista - PE</p>
+            <p class="loja-detalhes">Cozinha Completa • 06h às 22h</p>
+          </div>
+          <div class="loja-acao">➔</div>
+        </div>
+
+        <div class="loja-item clicavel" data-loja="salvador">
+          <div class="loja-info">
+            <div class="loja-header">
+              <h3>Salvador (Shopping)</h3>
+              <span class="status-texto">Aberto</span>
+            </div>
+            <p class="loja-endereco">Av. Centenário, 2992, Chame-Chame - BA</p>
+            <p class="loja-detalhes">Express e Retirada • 10h às 22h</p>
+          </div>
+          <div class="loja-acao">➔</div>
+        </div>
+
+        <div class="loja-item clicavel" data-loja="fortaleza">
+          <div class="loja-info">
+            <div class="loja-header">
+              <h3>Fortaleza (Beira Mar)</h3>
+              <span class="status-texto">Aberto</span>
+            </div>
+            <p class="loja-endereco">Av. Beira Mar, 3000, Meireles - CE</p>
+            <p class="loja-detalhes">Quiosque & Lanches • 08h às 23h</p>
+          </div>
+          <div class="loja-acao">➔</div>
+        </div>
+
+        <div class="loja-item clicavel" data-loja="caruaru">
+          <div class="loja-info">
+            <div class="loja-header">
+              <h3>Caruaru (Interior)</h3>
+              <span class="status-texto">Aberto</span>
+            </div>
+            <p class="loja-endereco">Rua Rui Barbosa, 45, Centro - PE</p>
+            <p class="loja-detalhes">Tradição & Pratos Quentes • 11h às 23h</p>
+          </div>
+          <div class="loja-acao">➔</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABA: CARDÁPIO -->
+    <section id="Cardapio" class="aba-conteudo" style="display: none;">
+      <div id="aviso-sem-loja" class="aviso-central">
+        <span class="icone-grande">📍</span>
+        <h2>Selecione uma Unidade</h2>
+        <p>Vá até a aba Lojas e escolha uma unidade para ver as opções disponíveis.</p>
+      </div>
+
+      <div id="container-cardapio-ativo" style="display: none;">
+        <div class="cabecalho-secao flex-between">
+          <div>
+            <h2 id="titulo-menu-loja">Cardápio</h2>
+            <p>Feito hoje, com ingredientes da terra.</p>
+          </div>
+        </div>
+        <div class="grid-produtos" id="grid-render-produtos"></div>
+      </div>
+    </section>
+
+    <!-- ABA: CARRINHO -->
+    <section id="Carrinho" class="aba-conteudo" style="display: none;">
+      <div class="cabecalho-secao">
+        <h2>Seu Pedido</h2>
+        <p>Revise os itens antes de finalizar.</p>
+      </div>
+
+      <div id="carrinho-vazio" class="aviso-central">
+        <span class="icone-grande">🛒</span>
+        <h2>Carrinho Vazio</h2>
+        <p>Você ainda não adicionou nenhuma delícia ao seu pedido.</p>
+      </div>
+
+      <div id="carrinho-cheio" style="display: none;">
+        <div class="lista-carrinho" id="lista-itens-carrinho"></div>
+        <div class="resumo-carrinho">
+          <div class="linha-resumo">
+            <span>Subtotal</span>
+            <span id="valor-subtotal">R$ 0,00</span>
+          </div>
+          <div class="linha-resumo">
+            <span>Taxa de Serviço</span>
+            <span>R$ 0,00</span>
+          </div>
+          <div class="linha-resumo total">
+            <span>Total a Pagar</span>
+            <span id="valor-total">R$ 0,00</span>
+          </div>
+          <button class="btn-primario-largo" id="btn-finalizar-pedido">Finalizar Pedido</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABA: FIDELIDADE -->
+    <section id="Fidelidade" class="aba-conteudo" style="display: none;">
+      <div class="cabecalho-secao">
+        <h2>Clube Raízes</h2>
+        <p>Faça parte da nossa família e seja recompensado.</p>
+      </div>
+
+      <div class="card-clube-vantagens">
+        <h3>Como funciona? 🤔</h3>
+        <div class="passos-fidelidade">
+          <div class="passo">
+            <span class="passo-icone">💸</span>
+            <p><strong>Compre:</strong> A cada <strong>R$ 1,00</strong> gasto, ganhe <strong>10 pontos</strong>.</p>
+          </div>
+          <div class="passo">
+            <span class="passo-icone">⭐</span>
+            <p><strong>Acumule:</strong> Pontos não expiram e ficam salvos no seu CPF.</p>
+          </div>
+        </div>
+
+        <hr class="linha-divisoria">
+
+        <h3>Recompensas 🎁</h3>
+        <ul class="lista-recompensas">
+          <li><span class="pontos-req">500 pts</span><span class="premio-desc">☕ Café Coado (Grátis)</span></li>
+          <li><span class="pontos-req">1.500 pts</span><span class="premio-desc">🥥 1 Sobremesa</span></li>
+          <li><span class="pontos-req">3.000 pts</span><span class="premio-desc">💰 R$ 20 de Desconto</span></li>
+          <li class="premio-vip">
+            <div class="vip-header">
+              <span class="pontos-req">10.000 pts</span>
+              <span class="premio-desc">🏆 Cliente VIP</span>
+            </div>
+            <div class="vip-conteudo">
+              <img src="https://cdn.awsli.com.br/2500x2500/2314/2314676/produto/272268666/d1cc1a3e56daf86a65276a487f0cba0d-18tuhipxbx.jpg" alt="Brinde" class="img-brinde">
+              <p>Receba nosso Kit com a Caneca Rústica e Manteiga da Terra artesanal.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ÁREA DE LOGIN (Some quando logado) -->
+      <div class="form-minimalista" id="area-login">
+        <form id="formularioLogin">
+          <div class="input-linha">
+            <input type="text" id="campoUsuario" placeholder="E-mail ou CPF" required>
+          </div>
+          <div class="input-linha">
+            <input type="password" id="campoSenha" placeholder="Senha" required>
+          </div>
+          <div class="box-privacidade">
+            <label class="checkbox-container">
+              <input type="checkbox" id="checkLgpd" required>
+              Concordo com a <a href="#" id="link-termos">Política de Privacidade</a>.
+            </label>
+          </div>
+          <button type="submit" class="btn-primario-largo">Entrar e Pontuar ✨</button>
+        </form>
+      </div>
+
+      <!-- ÁREA LOGADO (Aparece quando o login é feito) -->
+      <div id="area-logado" class="aviso-central" style="display: none;">
+        <span class="icone-grande">🎉</span>
+        <h2 id="texto-boas-vindas">Olá!</h2>
+        <p>Sua conta está ativa. Você já pode finalizar seus pedidos e acumular seus pontos no Clube Raízes!</p>
+        <button id="btn-sair-conta" class="btn-clean" style="margin-top: 15px; border-color: #E74C3C; color: #E74C3C;">Sair da conta</button>
+      </div>
+    </section>
+
+    <!-- MODAL DE PRIVACIDADE E LGPD -->
+    <div id="modal-lgpd" class="modal-overlay">
+      <div class="modal-conteudo">
+        <button class="btn-fechar-modal" id="btn-fechar-modal">×</button>
+        <span class="icone-modal">🤎</span>
+        <h3>Sua Privacidade em Nossa Casa</h3>
+        <p class="modal-intro">Assim como guardamos nossas receitas a sete chaves, cuidamos das suas informações com total segurança e respeito (LGPD).</p>
+        
+        <div class="modal-topicos">
+          <div class="topico-lgpd">
+            <h4>✨ Para que usamos?</h4>
+            <p>Seu CPF e E-mail são usados apenas para criar seu acesso seguro no Clube Raízes, somar seus pontos e liberar seus brindes.</p>
+          </div>
+          <div class="topico-lgpd">
+            <h4>🔒 O que NÃO fazemos?</h4>
+            <p>Nunca vendemos ou compartilhamos seus dados com outras empresas. Nossos pagamentos são processados em ambiente externo seguro.</p>
+          </div>
+        </div>
+        
+        <button class="btn-primario-largo" id="btn-entendi-modal">Entendi e Quero Seguir</button>
+      </div>
+    </div>
+
+  </main>
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
